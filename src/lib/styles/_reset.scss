@@ -1,0 +1,53 @@
+@use "variables" as *;
+
+:root{
+	scroll-behavior: smooth;
+	font-size: 17px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+
+	font-family: $text-body;
+	color: $body;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	color: #444;
+	min-width: 320px;
+}
+
+img,
+picture {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
