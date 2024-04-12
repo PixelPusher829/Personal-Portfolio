@@ -1,0 +1,192 @@
+/* ||HOME|| */
+
+/* Hero */
+header.hero-bg {
+	height: 50rem;
+}
+
+header .hero-content {
+	display: grid;
+	align-items: center;
+	gap: 4rem;
+	grid-template-columns: 1fr 2fr;
+	height: auto;
+	background-size: cover;
+	color: white;
+
+}
+
+.hero-content div {
+	max-width: 42rem;
+}
+
+.hero-content img {
+	border-radius: 100%;
+}
+
+/* Featured Projects */
+section#featured-work {
+	display: grid;
+	align-items: center;
+	gap: 2.7rem;
+	grid-template: auto / 1fr 1fr;
+}
+
+#featured-work img {
+	object-fit: cover;
+	height: 30rem;
+}
+
+#featured-work div {
+	margin-right: 8%;
+}
+
+/* My Skillset */
+.skillset-grid {
+	display: grid;
+	gap: 2.5rem 2rem;
+	grid: auto / repeat(2, 1fr);
+	margin-top: 2rem;
+}
+
+.skill-item {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.skill-item img {
+	object-fit: contain;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+}
+
+.skill-item > div {
+	flex-grow: 1;
+	width: auto;
+	margin-right: 2rem;
+}
+
+.skill-data span {
+	float: right;
+}
+
+.progress-bar {
+	height: 0.6rem;
+	background-color: hsl(0, 0%, 85%);
+	border-radius: 1rem;
+}
+
+.progress-fill {
+	height: 100%;
+	background-color: var(--secondary);
+}
+
+.skill-data {
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+
+/* Features */
+.features {
+	display: flex;
+	margin: 5rem 0 4rem;
+	justify-content: space-between;
+}
+
+.features img {
+	height: 7rem;
+}
+
+.features span {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: var(--heading);
+}
+.features div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	flex-grow: 1;
+}
+
+/* My Work CTA */
+#my-work-cta {
+	text-align: center;
+	background: url(../images/home/my_work_cta.jpg) center;
+	background-size: cover;
+}
+
+#my-work-cta > div {
+	padding: 4rem;
+	background-color: hsla(0, 0%, 100%, 0.95);
+}
+
+#my-work-cta .primary-btn {
+	margin-top: 2rem;
+}
+
+/* Testimonials */
+#testimonials {
+	display: grid;
+	grid: auto / 2fr 1fr;
+	align-items: center;
+	margin: 6rem auto;
+}
+
+#testimonials img {
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	object-position: 50% 10%;
+	border-radius: 50%;
+}
+
+#testimonials > div {
+	margin-right: 12%;
+}
+
+.client-name {
+	font-weight: 500;
+	font-size: 2.25rem;
+	display: block;
+	color: var(--heading);
+	margin-bottom: 0.7rem;
+}
+
+.client-company {
+	display: block;
+	font-weight: 500;
+	font-size: 1.1rem;
+	color: hsl(0, 0%, 65%);
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+}
+
+/* Statistics */
+#stats > div {
+	margin-top: 2.2rem;
+	display: grid;
+	grid: auto / repeat(3, 1fr);
+	gap: 2rem;
+}
+
+#stats span {
+	display: block;
+}
+
+.stat-number {
+	font-size: 4rem;
+	color: var(--secondary);
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+.stat-title {
+	color: hsl(0, 0%, 19%);
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
