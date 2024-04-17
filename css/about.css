@@ -1,19 +1,66 @@
 /* About Me */
 #about-intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
 }
 
-#about-intro>div{
-    margin-right: 15%;
-
+#about-intro > div {
+	margin-right: 15%;
 }
 
+.about-quote {
+	font-size: 1.5rem;
+	color: var(--dark-txt);
+	margin-bottom: 2.5rem;
+}
 
+/* Expertise */
+#my-experience {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.8rem;
+}
 
-.about-quote{
-    font-size: 1.5rem;
-    color: var(--dark-txt);
-    margin-bottom: 2.5rem;
+#my-experience .exp-card {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--light-bg);
+	padding: 1.8rem;
+}
+
+#my-experience .exp-column {
+	display: grid;
+	grid-template-rows: repeat(3, 17.6rem);
+	gap: 1.8rem;
+}
+
+#my-experience .card-date,
+#my-experience .card-title {
+	font-family: var(--text-display);
+}
+
+#my-experience .card-date {
+	font-size: 1.125rem;
+	font-weight: 500;
+}
+
+#my-experience .card-title {
+	font-size: 2.25rem;
+	font-weight: 500;
+}
+
+#my-experience .card-location {
+	font-weight: 500;
+	flex-grow: 1;
+	align-content: end;
+}
+
+h3 > i {
+	font-size: 2.4rem;
+	color: var(--heading);
+	text-align: end;
+	margin-right: 1rem;
+	position: relative;
+	top: 0.3rem;
 }
