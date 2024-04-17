@@ -1,0 +1,19 @@
+/* About Me */
+#about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#about-intro>div{
+    margin-right: 15%;
+
+}
+
+
+
+.about-quote{
+    font-size: 1.5rem;
+    color: var(--dark-txt);
+    margin-bottom: 2.5rem;
+}

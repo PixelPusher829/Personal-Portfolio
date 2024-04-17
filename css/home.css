@@ -1,11 +1,11 @@
 /* ||HOME|| */
 
 /* Hero */
-header.hero-bg {
+#home-hero {
 	height: 50rem;
 }
 
-header .hero-content {
+#home-hero .hero-content {
 	display: grid;
 	align-items: center;
 	gap: 4rem;
@@ -13,7 +13,6 @@ header .hero-content {
 	height: auto;
 	background-size: cover;
 	color: white;
-
 }
 
 .hero-content div {
@@ -185,7 +184,7 @@ section#featured-work {
 }
 
 .stat-title {
-	color: hsl(0, 0%, 19%);
+	color: var(--dark-txt);
 	font-size: 1.5rem;
 	font-weight: 500;
 	margin-bottom: 1rem;
