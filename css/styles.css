@@ -111,6 +111,7 @@ section.container {
 .primary-btn a,
 .primary-btn a:hover {
 	color: white;
+	margin:2px 0
 }
 
 .primary-btn:hover {
