@@ -10,16 +10,14 @@
 	--text-display: "Zilla Slab", serif;
 	--text-body: "Ubuntu", sans-serif;
 	scroll-behavior: smooth;
+	font-size: 16px;
 }
 
 /* Defaults */
 * {
-	overflow: auto;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0;
 	transition: 0.3s ease-in-out;
-	font-size: 16px;
 	font-family: var(--text-body);
 	color: var(--body);
 	line-height: 1.6em;
@@ -39,6 +37,7 @@ h5,
 h6 {
 	line-height: 1.2em;
 	margin-bottom: 1rem;
+	margin-top: 2rem;
 	font-family: var(--text-display);
 	font-weight: 600;
 	color: var(--heading);
@@ -64,8 +63,21 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.2rem;
+	margin-bottom: 1.1rem;
 	line-height: 2em;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	& li {
+		margin-bottom: 0.75rem;
+		line-height: 2em;
+	}
+	& ul {
+		margin-bottom: 1.1em;
+	}
 }
 
 .body-large {
@@ -82,10 +94,17 @@ p {
 	padding: 0 20px;
 }
 
-.container {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 0 2rem;
+.terms {
+	font-size: 16px;
+	text-wrap: pretty;
+	& h2 {
+		font-size: 1.8em;
+	}
+}
+
+section.terms,
+div.terms {
+	max-width: 75ch;
 }
 
 section.container {
@@ -96,10 +115,17 @@ section.container {
 	border-radius: 1.1rem;
 }
 
+footer ul,
+nav ul,
+.contact-info {
+	padding-inline-start: 0;
+	list-style-type: none;
+}
+
 /* Buttons */
 .primary-btn {
 	display: inline-block;
-	padding: 0.6rem 1.8rem;
+	padding: 0.6rem 2.5rem;
 	background-color: var(--primary);
 	border-radius: 40px;
 	font-family: var(--text-body);
@@ -108,10 +134,8 @@ section.container {
 }
 
 .primary-btn,
-.primary-btn a,
-.primary-btn a:hover {
+.primary-btn:hover {
 	color: white;
-	margin:2px 0
 }
 
 .primary-btn:hover {
@@ -125,6 +149,7 @@ div > .primary-btn {
 }
 
 /* Navigation */
+
 nav {
 	justify-items: center;
 	display: flex;
@@ -133,12 +158,18 @@ nav {
 	padding: 10px 20px;
 	font-family: var(--text-body);
 	font-weight: 500;
+	font-size: 1.1rem;
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.116);
 }
 
 nav img {
 	width: 300px;
 	height: auto;
-	margin-bottom: 2px;
+	transform: translateY(4px);
 }
 
 nav ul {
@@ -171,10 +202,10 @@ header.hero-bg {
 	height: 15.4rem;
 }
 
-header .hero-content{
+header .hero-content {
 	align-content: center;
 	justify-content: start;
-	flex-grow:1;
+	flex-grow: 1;
 }
 
 header {
@@ -219,8 +250,8 @@ header::after {
 .gray-filter {
 	backdrop-filter: grayscale(100%);
 }
-.contact-cta h2, .contact-cta
-span {
+.contact-cta h2,
+.contact-cta span {
 	color: white;
 }
 
@@ -235,6 +266,9 @@ span {
 	margin-bottom: 1rem;
 }
 
+a:hover:not(.primary-btn) {
+	color: var(--secondary);
+}
 /* Footer */
 
 footer {
@@ -244,28 +278,66 @@ footer {
 
 footer * {
 	color: white;
-
 }
 
 footer img {
-	width: 17.8rem;
+	max-width: 17.8rem;
 	height: 100%;
 	justify-self: left;
 }
 
 footer > div {
 	display: grid;
-	grid: auto / repeat(3, 1fr);
-	gap: 1rem;
+	grid-template: auto / repeat(3, minmax(auto, 1fr));
+	grid-auto-flow: row;
 	align-items: center;
+	gap: 5rem;
 	padding-bottom: 2rem;
 	border-bottom: 1px solid white;
+
+	& > *,
+	& ul {
+		overflow: visible;
+	}
+}
+
+@media screen and (max-width: 1045px) {
+	footer > div {
+		grid-template: auto / 1fr;
+		justify-items: center;
+		gap: 1rem;
+		& > * {
+			align-content: center;
+		}
+	}
+
+	footer > div > a img {
+		margin-bottom: 0.5rem;
+	}
+
+	footer > div > a {
+		min-width: auto;
+	}
+
+	footer {
+		background-color: hsl(221, 53%, 13%);
+		padding: 2rem;
+	}
 }
 
 ul.footer-nav {
 	display: flex;
+	list-style: none;
 	gap: 2rem;
 	justify-content: center;
+}
+
+.footer-nav li {
+	flex-shrink: 0;
+}
+
+footer > div > a {
+	min-width: 17rem;
 }
 
 footer a,

@@ -41,7 +41,7 @@
 #my-experience .card-date,
 #my-experience .card-title {
 	font-family: var(--text-display);
-	color: black;
+	color: rgb(50, 50, 50);
 }
 
 #my-experience .card-date {
@@ -82,7 +82,7 @@ h3 > i {
 }
 
 #why-my-services .service-title {
-	font-size: 1.125rem;
+	font-size: 1.3rem;
 	color: var(--heading);
 	font-weight: 500;
 }
@@ -96,6 +96,7 @@ h3 > i {
 
 .services-grid img{
 	width: 8rem;
+	margin-bottom: 1rem;
 }
 
 /* My Clients */
