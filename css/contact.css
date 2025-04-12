@@ -45,10 +45,8 @@ input[type="checkbox"] {
 }
 
 /* Contact Content */
-.contact-content {
-	margin-top: 2rem;
+.contact-content{
 	flex-direction: column;
-
 	& .contact-info {
 		margin-top: 1.75rem;
 		& > li a {
@@ -72,5 +70,5 @@ input[type="checkbox"] {
 }
 
 .contact-content li:hover .fi {
-	color: var(--secondary); 
+	color: var(--secondary);
 }

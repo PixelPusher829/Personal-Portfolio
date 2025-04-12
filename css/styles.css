@@ -29,12 +29,7 @@ img {
 }
 
 /* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:is(h1, h2, h3, h4, h5, h6) {
 	line-height: 1.2em;
 	margin-bottom: 1rem;
 	margin-top: 2rem;
@@ -159,7 +154,8 @@ nav {
 	font-family: var(--text-body);
 	font-weight: 500;
 	font-size: 1.1rem;
-	position: fixed;
+	position: sticky;
+
 	z-index: 3;
 	width: 100%;
 	background-color: rgb(255, 255, 255);
