@@ -24,10 +24,13 @@ textarea {
 	background-color: var(--light-bg);
 	padding: 0.6rem;
 	border-radius: 5px;
-	border: 1px solid #dcdcdc;
-	outline-color: var(--secondary);
-	transition: 0s;
+	border: 1px solid hsl(0, 0%, 86%);
+	outline: solid 2px transparent;
 	resize: vertical;
+	transition: 0.3s ease-in-out;
+	&:focus {
+		outline: solid 2px var(--secondary);
+	}
 }
 
 textarea {
@@ -38,6 +41,7 @@ textarea {
 
 input[type="checkbox"] {
 	margin-right: 0.5rem;
+	accent-color: var(--secondary);
 }
 
 [type="submit"] {

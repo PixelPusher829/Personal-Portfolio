@@ -36,6 +36,7 @@ img {
 	font-family: var(--text-display);
 	font-weight: 600;
 	color: var(--heading);
+	text-wrap: balance;
 }
 
 h1 {
@@ -60,6 +61,7 @@ h6 {
 p {
 	margin-bottom: 1.1rem;
 	line-height: 2em;
+	text-wrap: pretty;
 }
 
 .container {
@@ -88,7 +90,6 @@ p {
 	margin: 60px auto;
 	padding: 0 20px;
 }
-
 .terms {
 	font-size: 16px;
 	text-wrap: pretty;
@@ -128,6 +129,29 @@ nav ul,
 	text-decoration: none;
 }
 
+.secondary-button{
+	display: inline-block;
+	font-size: 1rem;
+	padding: 0.2em 1.4em;
+	border: 2px solid var(--secondary);
+	border-radius: 40px;
+	font-family: var(--text-body);
+	font-weight: 500;
+	text-decoration: none;
+	color: var(--secondary);
+	&:hover {
+		background-color: var(--secondary);
+		color: white;
+	}
+	& i{
+		color:inherit;
+		font-size: 0.8em;
+		position: relative;
+		left: 6px;
+		top: 1.2px;
+	}
+}
+
 .primary-btn,
 .primary-btn:hover {
 	color: white;
@@ -155,7 +179,7 @@ nav {
 	font-weight: 500;
 	font-size: 1.1rem;
 	position: sticky;
-
+	top: 0;
 	z-index: 3;
 	width: 100%;
 	background-color: rgb(255, 255, 255);
@@ -260,9 +284,11 @@ header::after {
 .contact-cta span {
 	display: block;
 	margin-bottom: 1rem;
+	font-weight: 200;
+	font-size: 1.4rem;
 }
 
-a:hover:not(.primary-btn) {
+a:hover:not(.primary-btn, .secondary-button) {
 	color: var(--secondary);
 }
 /* Footer */
@@ -316,7 +342,7 @@ footer > div {
 	}
 
 	footer {
-		background-color: hsl(221, 53%, 13%);
+		background-color: hsl(221, 52%, 13%);
 		padding: 2rem;
 	}
 }
