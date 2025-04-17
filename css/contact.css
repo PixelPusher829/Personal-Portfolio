@@ -50,6 +50,7 @@ input[type="checkbox"] {
 
 /* Contact Content */
 .contact-content{
+	padding-top: 2rem;
 	flex-direction: column;
 	& .contact-info {
 		margin-top: 1.75rem;

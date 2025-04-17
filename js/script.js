@@ -1,9 +1,10 @@
 // Current Date
-const d = new Date();
-let year = d.getFullYear();
-
-document.getElementById("date").innerHTML = year;
-console.log(year);
+const date = new Date();
+let year = date.getFullYear();
+const dateElement = document.querySelector('.date');
+if (dateElement) {
+  dateElement.textContent = year;
+}
 
 
 //Progress Bar Animation

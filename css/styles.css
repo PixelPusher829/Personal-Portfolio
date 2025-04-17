@@ -32,11 +32,13 @@ img {
 :is(h1, h2, h3, h4, h5, h6) {
 	line-height: 1.2em;
 	margin-bottom: 1rem;
-	margin-top: 2rem;
 	font-family: var(--text-display);
 	font-weight: 600;
 	color: var(--heading);
 	text-wrap: balance;
+	& :not(header) {
+		margin-top: 2rem;
+	}
 }
 
 h1 {
