@@ -81,6 +81,8 @@ section#featured-work {
 	height: 100%;
 	border-radius: 1rem;
 	background-color: var(--secondary);
+	transition: width 0.7s ease;
+	width: 0%;
 }
 
 .skill-data {
@@ -93,23 +95,21 @@ section#featured-work {
 	display: flex;
 	margin: 5rem 0 4rem;
 	justify-content: space-between;
-}
-
-.features img {
-	height: 7rem;
-}
-
-.features span {
-	font-size: 1.2rem;
-	font-weight: 500;
-	color: var(--heading);
-}
-.features div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2rem;
-	flex-grow: 1;
+	& img {
+		height: 7rem;
+	}
+	& span {
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: var(--heading);
+	}
+	& div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		flex-grow: 1;
+	}
 }
 
 /* My Work CTA */
@@ -188,5 +188,5 @@ section#featured-work {
 	color: var(--dark-txt);
 	font-size: 1.5rem;
 	font-weight: 500;
-	margin-bottom: 1rem;
+	margin-bottom: 0.6rem;
 }
