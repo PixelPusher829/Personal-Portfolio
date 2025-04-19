@@ -46,6 +46,7 @@ input[type="checkbox"] {
 
 [type="submit"] {
 	border: none;
+	font-size: 1rem;
 }
 
 /* Contact Content */
@@ -63,7 +64,9 @@ input[type="checkbox"] {
 }
 
 .contact-content .fi {
-	margin-top: 3px;
+	position: relative;
+	top: 0.2rem;
+	align-self: flex-start;
 }
 
 .contact-content li {
