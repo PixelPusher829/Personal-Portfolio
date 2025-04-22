@@ -23,6 +23,34 @@
 	border-radius: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+	#home-hero {
+		height: auto;
+		transition: all 0s ease;
+		& .hero-content{
+			padding: 8rem 2rem;
+		}
+	}
+}
+
+@media screen and (max-width: 990px) {
+	#home-hero{
+		height: auto;
+		& .hero-content{
+			grid-template-columns: 1fr;
+			justify-items: center;
+			text-align: center;
+			padding: 4rem 2rem;
+			gap: 2rem;
+		}
+		& .hero-content img{
+			max-width: clamp(5rem, 50%, 20rem);
+			transition: max-width 0s ease;
+		}
+	}
+
+}
+
 /* Featured Projects */
 section#featured-work {
 	display: grid;
@@ -40,12 +68,31 @@ section#featured-work {
 	margin-right: 8%;
 }
 
+@media screen and (max-width: 990px) {
+	section#featured-work {
+		grid-template: auto / 1fr;
+		gap: 2rem;
+
+	}
+	#featured-work img {
+		grid-row: 1;
+		height: auto;
+		aspect-ratio: 16/9;
+	}
+}
+
 /* My Skillset */
 .skillset-grid {
 	display: grid;
 	gap: 2.5rem 2rem;
 	grid: auto / repeat(2, 1fr);
 	margin-top: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+	.skillset-grid {
+		grid: auto / 1fr;
+	}
 }
 
 .skill-item {
@@ -92,25 +139,99 @@ section#featured-work {
 
 /* Features */
 .features {
-	display: flex;
+	display: grid;
 	margin: 5rem 0 4rem;
-	justify-content: space-between;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 2rem;
+	row-gap: 4rem;
+	justify-content: space-evenly;
+	transition: all 0s ease;
 	& img {
-		height: 7rem;
+		max-height: 7rem;
 	}
 	& span {
 		font-size: 1.2rem;
 		font-weight: 500;
 		color: var(--heading);
 	}
-	& div {
+}
+
+
+.features > div {
+	gap: 1rem;
+	text-align: center;
+	min-width: fit-content;
+	align-self: start;
+	& img {
+		display: block;
+		margin: auto;
+		margin-bottom: 1rem;
+	}
+
+}
+
+
+@media screen and (max-width: 1170px) {
+	.features {
+		gap: 1rem;
+		margin: 5rem auto 4rem;
+		& span{
+			font-size: 1rem;
+		}
+
+	}
+	
+
+}
+
+@media screen and (max-width: 920px) {
+	.features {
+		grid-template-columns: repeat(6, 1fr);
+		row-gap: 3rem;
+		width: min(650px, 100%);
+		& div{
+			grid-column: span 2;
+			margin-bottom: 1rem;
+		}
+		& div:nth-child(4) {
+			grid-column: 2 / 4;
+			
+		}
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+	.features {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-		flex-grow: 1;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2.5rem;
+		& > div {
+			flex: 1;
+			margin-bottom: 1.5rem;
+			max-width: 10rem;
+		}
+		& img{
+			max-height: 7rem;
+		}
 	}
 }
+
+@media screen and (max-width: 555px) {
+	.features {
+		flex-direction: column;
+		& > div {
+			align-self: center;
+		}
+
+		& span{
+			font-size: 1.1rem;
+		}
+	}
+}
+
+
 
 /* My Work CTA */
 #my-work-cta {
@@ -122,6 +243,12 @@ section#featured-work {
 #my-work-cta > div {
 	padding: 4rem;
 	background-color: hsla(0, 0%, 100%, 0.95);
+}
+
+@media screen and (max-width: 700px) {
+	#my-work-cta > div {
+		padding: 3rem 2rem;
+	}
 }
 
 #my-work-cta .primary-btn {
@@ -165,6 +292,28 @@ section#featured-work {
 	margin-bottom: 1.5rem;
 }
 
+
+@media screen and (max-width: 700px) {
+	#testimonials {
+		grid-template: auto / 1fr;
+		text-align: center;
+		align-items: center;
+		justify-items: center;
+		margin: 6rem auto;
+		& > div {
+			margin-right: 0;
+		}
+	}
+
+	#testimonials img {
+		grid-row: 1;
+		max-width: 15rem;
+		margin-bottom: 2rem;
+	}
+	#testimonials .body-large {
+		font-size: 1.2rem;
+	}
+}
 /* Statistics */
 #stats > div {
 	margin-top: 2.2rem;
@@ -189,4 +338,10 @@ section#featured-work {
 	font-size: 1.5rem;
 	font-weight: 500;
 	margin-bottom: 0.6rem;
+}
+
+@media screen and (max-width: 700px) {
+	#stats > div {
+		grid-template: auto / 1fr;
+	}
 }
