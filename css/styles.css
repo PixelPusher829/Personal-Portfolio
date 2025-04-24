@@ -68,15 +68,10 @@ p {
 	text-wrap: pretty;
 }
 
-.body-large {
-	font-size: 1.5rem;
+.container .body-large {
+	font-size: clamp(1.2rem, 1.2rem + 1vw, 1.5rem);
 }
 
-@media screen and (max-width: 1100px) {
-	.body-large {
-		font-size: clamp(1.28rem, 1.28rem + 0.1vw, 1.5rem);
-	}
-}
 
 /*Global  */
 .container {
@@ -316,13 +311,16 @@ nav ul.active{
 
 /* Header */
 header.hero-bg {
-	height: 15.4rem;
+	height: auto;
 }
 
 header .hero-content {
 	align-content: center;
 	justify-content: start;
 	flex-grow: 1;
+	position: relative;
+	top: 0.2rem;
+	padding: clamp(2rem, 2rem + 2vw, 6rem) 2rem;
 }
 
 header {
@@ -387,6 +385,12 @@ header::after {
 
 a:hover:not(.primary-btn, .secondary-button) {
 	color: var(--secondary);
+}
+
+@media screen and (max-width: 900px) {
+	.contact-cta .body-large{
+		font-size: 1.2rem;
+	}
 }
 /* Footer */
 

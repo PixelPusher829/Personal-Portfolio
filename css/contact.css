@@ -1,7 +1,19 @@
-section {
+/* Layout */
+#contact {
 	display: grid;
 	grid: auto/1fr 1fr;
-	gap: 8%;
+	gap: 4rem;
+	margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 900px) {
+	#contact {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	.contact-content {
+		grid-row: 1
+	}
 }
 
 /* Form */
@@ -79,4 +91,15 @@ input[type="checkbox"] {
 
 .contact-content li:hover .fi {
 	color: var(--secondary);
+}
+
+@media screen and (max-width: 900px) {
+	.contact-content {
+		& .body-large {
+			font-size: 1.3rem;
+		}
+		& li :is(li a, li .fi) {
+			font-size: 1.2rem;
+		}
+	}
 }

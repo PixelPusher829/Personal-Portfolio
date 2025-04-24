@@ -3,16 +3,36 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
-}
-
-#about-intro > div {
-	margin-right: 15%;
+	gap: 3rem;
 }
 
 .about-quote {
-	font-size: 1.5rem;
+	font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
 	color: var(--dark-txt);
 	margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+	#about-intro {
+		grid-template-columns: 2fr 1fr;
+		& img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#about-intro {
+		grid-template-columns: 1fr;
+
+		& img {
+			object-fit: cover;
+			grid-row: 1;
+			aspect-ratio: 1/1;
+			object-position: 50% 40%;
+		}
+	}
 }
 
 /* Expertise */
@@ -34,7 +54,7 @@
 
 #my-experience .exp-column {
 	display: grid;
-	grid-template-rows: repeat(3, 17.6rem);
+	grid-template-rows: repeat(3, 16.6rem);
 	gap: 1.8rem;
 }
 
@@ -50,7 +70,7 @@
 }
 
 #my-experience .card-title {
-	font-size: 2.25rem;
+	font-size: 1.8rem;
 	font-weight: 500;
 }
 
@@ -60,7 +80,16 @@
 	align-content: end;
 }
 
-h3 > i {
+@media screen and (max-width: 800px) {
+	#my-experience {
+		grid-template-columns: 1fr;
+		& .exp-column{
+			grid-template-rows: repeat(3, minmax(16.6rem, auto));
+		}
+	}
+}
+
+#my-experience h3 > i {
 	font-size: 2.4rem;
 	color: var(--heading);
 	text-align: end;
@@ -77,12 +106,13 @@ h3 > i {
 #why-my-services .services-grid {
 	display: grid;
 	grid: auto / repeat(3, 1fr);
-	gap: 7rem;
+	gap: 3rem;
 	margin-top: 3rem;
+	justify-items: center;
 }
 
 #why-my-services .service-title {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	color: var(--heading);
 	font-weight: 500;
 }
@@ -92,11 +122,19 @@ h3 > i {
 	flex-direction: column;
 	gap: 1rem;
 	align-items: center;
+	max-width: 19rem;
 }
 
 .services-grid img{
 	width: 8rem;
 	margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 900px) {
+	#why-my-services .services-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 /* My Clients */
@@ -137,3 +175,11 @@ h3 > i {
 .clients-grid :nth-child(6){
 	height: 3rem;
 }
+
+@media screen and (max-width: 900px) {
+	#my-clients .clients-grid {
+		grid-template-columns: 1fr;
+		gap: rem;
+	}
+}
+
