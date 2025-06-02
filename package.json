@@ -1,0 +1,29 @@
+{
+	"name": "personal-portfolio",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "parcel src/pages/index.html",
+		"build": "parcel build src/pages/index.html"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PixelPusher829/Personal-Portfolio.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/PixelPusher829/Personal-Portfolio/issues"
+	},
+	"homepage": "https://github.com/PixelPusher829/Personal-Portfolio#readme",
+	"description": "",
+	"devDependencies": {
+		"parcel-bundler": "^1.12.5",
+		"sass": "^1.89.1"
+	},
+	"dependencies": {
+		"personal-portfolio": "file:"
+	}
+}

@@ -1,0 +1,26 @@
+@use "../partials" as *;
+/* Terms Page*/
+.terms {
+	font-size: 1rem;
+	text-wrap: pretty;
+	& h2 {
+		font-size: 1.8rem;
+	}
+}
+
+section.terms,
+div.terms {
+	max-width: 75ch;
+}
+
+section.container {
+	margin: 7rem auto;
+}
+
+@media screen and (max-width: 990px) {
+	section.container {
+		margin: 4rem auto;
+	}
+}
+
+

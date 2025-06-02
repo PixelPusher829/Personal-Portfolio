@@ -1,0 +1,19 @@
+@use "../partials" as *;
+/* Reset */
+:root {
+	scroll-behavior: smooth;
+}
+
+* {
+    font-family: $text-body;
+    color: $body;
+    line-height: 1.6em;
+    box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
