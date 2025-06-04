@@ -749,7 +749,7 @@ section#featured-work {
   margin-top: 2.2rem;
   display: grid;
   grid: auto/repeat(3, 1fr);
-  gap: 2rem;
+  gap: 4rem;
 }
 
 #stats span {
@@ -784,6 +784,11 @@ section#featured-work {
   align-items: center;
   gap: 3rem;
 }
+#about-intro img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 10% 50%;
+}
 
 .about-quote {
   font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
@@ -794,10 +799,6 @@ section#featured-work {
 @media screen and (max-width: 1100px) {
   #about-intro {
     grid-template-columns: 2fr 1fr;
-  }
-  #about-intro img {
-    height: 100%;
-    object-fit: cover;
   }
 }
 @media screen and (max-width: 800px) {
