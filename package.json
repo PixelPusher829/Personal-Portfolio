@@ -13,25 +13,11 @@
 	"license": "ISC",
 	"author": "James Barnes",
 	"type": "commonjs",
-	"targets": {
-		"default": {
-			"source": [
-				"src/index.html",
-				"src/pages/*.html"
-			],
-			"distDir": "./dist",
-			"publicUrl": "/"
-		},
-		"projects": {
-			"source": "src/pages/projects/*.html",
-			"distDir": "./dist/projects",
-			"publicUrl": "/projects/"
-		}
-	},
+	"source": "src/index.html",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "parcel",
-		"build": "parcel build"
+		"dev": "parcel --open",
+		"build": "parcel build --open"
 	},
 	"dependencies": {
 		"parcel": "^2.15.2"
