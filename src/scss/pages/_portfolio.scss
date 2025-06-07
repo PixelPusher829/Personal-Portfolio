@@ -131,11 +131,11 @@
 :is(.portfolio-grid, .featured-projects) img:hover {
     outline-color: $secondary;
     transform: scale(1.025);
+    transition: color 0.3s ease-in-out;
     box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.156);
 }
 
 :is(.portfolio-grid) span {
-    transition: color 0.3s ease-in-out;
 }
 
 :is(.portfolio-grid) a:hover span {

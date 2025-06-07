@@ -27,28 +27,27 @@
 	#home-hero {
 		height: auto;
 		transition: all 0s ease;
-		& .hero-content{
+		& .hero-content {
 			padding: 8rem 2rem;
 		}
 	}
 }
 
 @media screen and (max-width: 990px) {
-	#home-hero{
+	#home-hero {
 		height: auto;
-		& .hero-content{
+		& .hero-content {
 			grid-template-columns: 1fr;
 			justify-items: center;
 			text-align: center;
 			padding: 4rem 2rem;
 			gap: 2rem;
 		}
-		& .hero-content img{
+		& .hero-content img {
 			max-width: clamp(5rem, 50%, 20rem);
 			transition: max-width 0s ease;
 		}
 	}
-
 }
 
 /* Featured Projects */
@@ -72,7 +71,6 @@ section#featured-work {
 	section#featured-work {
 		grid-template: auto / 1fr;
 		gap: 2rem;
-
 	}
 	#featured-work img {
 		grid-row: 1;
@@ -156,7 +154,6 @@ section#featured-work {
 	}
 }
 
-
 .features > div {
 	gap: 1rem;
 	text-align: center;
@@ -167,21 +164,16 @@ section#featured-work {
 		margin: auto;
 		margin-bottom: 1rem;
 	}
-
 }
-
 
 @media screen and (max-width: 1170px) {
 	.features {
 		gap: 1rem;
 		margin: 5rem auto 4rem;
-		& span{
+		& span {
 			font-size: 1rem;
 		}
-
 	}
-	
-
 }
 
 @media screen and (max-width: 920px) {
@@ -189,16 +181,14 @@ section#featured-work {
 		grid-template-columns: repeat(6, 1fr);
 		row-gap: 3rem;
 		width: min(650px, 100%);
-		& div{
+		& div {
 			grid-column: span 2;
 			margin-bottom: 1rem;
 		}
 		& div:nth-child(4) {
 			grid-column: 2 / 4;
-			
 		}
 	}
-
 }
 
 @media screen and (max-width: 700px) {
@@ -212,7 +202,7 @@ section#featured-work {
 			margin-bottom: 1.5rem;
 			max-width: 10rem;
 		}
-		& img{
+		& img {
 			max-height: 7rem;
 		}
 	}
@@ -225,7 +215,7 @@ section#featured-work {
 			align-self: center;
 		}
 
-		& span{
+		& span {
 			font-size: 1.1rem;
 		}
 	}
@@ -268,7 +258,6 @@ section#featured-work {
 	margin-bottom: 1.5rem;
 }
 
-
 @media screen and (max-width: 1100px) {
 	#testimonials {
 		grid-template: auto / 1fr;
@@ -295,7 +284,7 @@ section#featured-work {
 	margin-top: 2.2rem;
 	display: grid;
 	grid: auto / repeat(3, 1fr);
-	gap: 2rem;
+	gap: 4rem;
 }
 
 #stats span {

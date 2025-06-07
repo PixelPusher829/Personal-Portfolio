@@ -1,29 +1,42 @@
 {
 	"name": "personal-portfolio",
 	"version": "1.0.0",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "parcel src/pages/index.html",
-		"build": "parcel build src/pages/index.html"
+	"description": "",
+	"homepage": "https://github.com/PixelPusher829/Personal-Portfolio#readme",
+	"bugs": {
+		"url": "https://github.com/PixelPusher829/Personal-Portfolio/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/PixelPusher829/Personal-Portfolio.git"
 	},
-	"keywords": [],
-	"author": "",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/PixelPusher829/Personal-Portfolio/issues"
+	"author": "James Barnes",
+	"type": "commonjs",
+	"targets": {
+		"default": {
+			"source": [
+				"src/index.html",
+				"src/pages/*.html"
+			],
+			"distDir": "./dist",
+			"publicUrl": "/"
+		},
+		"projects": {
+			"source": "src/pages/projects/*.html",
+			"distDir": "./dist/projects",
+			"publicUrl": "/projects/"
+		}
 	},
-	"homepage": "https://github.com/PixelPusher829/Personal-Portfolio#readme",
-	"description": "",
-	"devDependencies": {
-		"parcel-bundler": "^1.12.5",
-		"sass": "^1.89.1"
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "parcel",
+		"build": "parcel build"
 	},
 	"dependencies": {
-		"personal-portfolio": "file:"
+		"parcel": "^2.15.2"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.15.2"
 	}
 }

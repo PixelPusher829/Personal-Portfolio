@@ -1,3 +1,4 @@
-# ignore all working files
-/_working-files
+# Editor directories and files
 /node_modules
+/_working-files
+/.parcel-cache
