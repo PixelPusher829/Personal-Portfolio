@@ -15,7 +15,7 @@
 	"type": "commonjs",
 	"source": "src/index.html",
 	"scripts": {
-		"dev": "parcel --open",
+		"dev": "parcel",
 		"build": "parcel build",
 		"deploy": "gh-pages -d dist"
 	},
