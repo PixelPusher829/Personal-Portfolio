@@ -14,7 +14,6 @@
 	"author": "James Barnes",
 	"type": "commonjs",
 	"source": "src/index.html",
-	"publicUrl": "/Personal-Portfolio/",
 	"scripts": {
 		"dev": "parcel --open",
 		"build": "parcel build",
@@ -26,5 +25,10 @@
 	"devDependencies": {
 		"@parcel/transformer-sass": "^2.15.2",
 		"gh-pages": "^6.3.0"
-	}
+	},
+	"targets": {
+	  "default": {     
+		"publicUrl": "/Personal-Portfolio/" 
+	  }
+}
 }

@@ -2,3 +2,4 @@
 /node_modules
 /_working-files
 /.parcel-cache
+/dist
