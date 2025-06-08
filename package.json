@@ -2,7 +2,7 @@
 	"name": "personal-portfolio",
 	"version": "1.0.0",
 	"description": "",
-	"homepage": "https://github.com/PixelPusher829/Personal-Portfolio#readme",
+	"homepage": "https://pixelpusher829.github.io/Personal-Portfolio/",
 	"bugs": {
 		"url": "https://github.com/PixelPusher829/Personal-Portfolio/issues"
 	},
@@ -14,12 +14,12 @@
 	"author": "James Barnes",
 	"type": "commonjs",
 	"source": "src/index.html",
-	"publicUrl": "Personal-Portfolio",
+	"publicUrl": "/Personal-Portfolio/",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "parcel --open",
 		"build": "parcel build",
-		"deploy": "npm run build && gh-pages -d dist"
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"gh-pages": "^6.3.0",
