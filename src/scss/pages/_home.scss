@@ -58,14 +58,24 @@ section#featured-work {
 	grid-template: auto / 1fr 1fr;
 }
 
-#featured-work img {
+#featured-work {
+	img {
 	object-fit: cover;
 	height: 30rem;
 }
-
-#featured-work div {
+div {
 	margin-right: 8%;
 }
+ span{
+	font-size: clamp(1.2rem, 1.1rem + 0.5vw, 2rem);
+	font-weight: 500;
+	display: block;
+	margin-bottom: 0.4rem;
+
+ }
+}
+
+
 
 @media screen and (max-width: 990px) {
 	section#featured-work {
