@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>James Barnes - Terms of Service</title>
+</svelte:head>
 
 <section class="container terms">
     <p><strong>Effective Date:</strong> April 12, 2025</p>

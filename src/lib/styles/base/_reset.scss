@@ -1,6 +1,10 @@
 @use "../partials" as *;
 /* Reset */
 
+:root{
+	font-size: 17px;
+}
+
 *,
 *::before,
 *::after {
@@ -12,7 +16,6 @@
 	color: $body;
 	margin: 0;
 	padding: 0;
-	scroll-behavior: smooth;
 	line-height: 1.5;
 }
 
