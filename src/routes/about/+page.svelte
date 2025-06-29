@@ -175,6 +175,16 @@
 		}
 	}
 
+	.socials{
+		font-size: 1.4rem;
+		display: flex;
+		gap: 0.7rem;
+		& a{
+			text-decoration: none;
+			
+		}
+	}
+
 	.about-quote {
 		font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
 		color: $dark-txt;

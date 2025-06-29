@@ -38,4 +38,6 @@
 		text-align: center;
 		display: block;
 	}
+
+	
 </style>

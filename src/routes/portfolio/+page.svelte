@@ -1,6 +1,7 @@
 <script>
 	import PortfolioListing from '$lib/components/pages/portfolio/PortfolioListing.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
+	import projectData from '$lib/data/project-database.json'; 
 	let pageTitle = 'Project Archive';
 </script>
 
@@ -20,12 +21,9 @@
 		amazing happen!
 	</p>
 	<div class="portfolio-grid">
-		<PortfolioListing title="FlexFit" id="flexfit" />
-		<PortfolioListing title="Vibrant Visions" id="vibrant-visions" />
-		<PortfolioListing title="Flower Cafe" id="flowercafe" />
-		<PortfolioListing title="Murder Mystery Guide" id="murder-mystery-guide" />
-		<PortfolioListing title="Lillian Gray Art School" id="lillian-gray-art-school" />
-		<PortfolioListing title="Pharmacentrix" id="pharmacentrix" />
+		{#each projectData as project (project.id)}
+			<PortfolioListing title={project.projectName} id={project.id} />
+		{/each}
 	</div>
 </section>
 

@@ -25,7 +25,7 @@
 	}
 
 	.header-standard {
-		min-height: 15rem;
+		min-height: min(10rem, 6rem + 8vw);
 	}
 
 	header .hero-content {
@@ -34,7 +34,7 @@
 		flex-grow: 1;
 		position: relative;
 		top: 0.2rem;
-		padding: clamp(2rem, 2rem + 2vw, 6rem) 2rem;
+		padding: 0 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

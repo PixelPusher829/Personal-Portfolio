@@ -34,4 +34,14 @@
 		aspect-ratio: 1/1;
 		width: 50%;
 	}
+
+	@media screen and (max-width: 900px) {
+		.project-info {
+			flex-direction: column;
+		}
+		.project-info img {
+			width: 100%;
+			aspect-ratio: 16/9;
+		}
+	}
 </style>
