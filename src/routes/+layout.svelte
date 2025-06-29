@@ -4,17 +4,17 @@
 	import GlobalNav from '$lib/components/layout/GlobalNav.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
 	import ContactCta from '$lib/components/layout/ContactCta.svelte';
-	import HeroBanner from '$lib/components/layout/HeroBanner.svelte';
 	import { page } from '$app/stores';
-
+	import HeroBanner from '$lib/components/layout/HeroBanner.svelte';
 	let { children } = $props();
+	let currentPageTitle = 'Page Title';
+
+	export const prerender = true;
 </script>
 
 <div>
 	<GlobalNav />
-	{#if $page.url.pathname !== '/'}
-		<Header />
-	{:else}
+	{#if $page.url.pathname == '/'}
 		<HeroBanner />
 	{/if}
 	<div>

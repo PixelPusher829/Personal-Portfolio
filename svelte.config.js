@@ -1,17 +1,32 @@
+// svelte.config.js
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
-import preprocess from "svelte-preprocess";
+import preprocess from 'svelte-preprocess';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import path from "path";
+import path from 'path';
+import fs from 'fs';
 
-/** @type {import('@sveltejs/kit').Config} */
+function getPortfolioProjectIDsFromJSON() {
+	const jsonFilePath = path.resolve(process.cwd(), 'src', 'lib', 'data', 'project-database.json');
+
+	try {
+		const fileContent = fs.readFileSync(jsonFilePath, 'utf-8');
+		const projects = JSON.parse(fileContent);
+		const ids = projects.map((project) => project.id);
+		return ids;
+	} catch (error) {
+		console.error(error);
+		return [];
+	}
+}
+
+const yourPortfolioProjectIDs = getPortfolioProjectIDsFromJSON();
+
 const config = {
-	// Consult https://svelte.dev/docs/kit/integrations
-	// for more information about preprocessors
 	preprocess: [
 		preprocess({
 			scss: {
-				includePaths: [path.resolve("./src/lib/styles")],
+				includePaths: [path.resolve('./src/lib/styles')],
 			},
 		}),
 		vitePreprocess(),
@@ -19,9 +34,26 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: 'index.html',
+			precompress: false,
+			strict: true,
+		}),
+
+		prerender: {
+			entries: [
+				'/',
+				'/about',
+				'/contact',
+				'/portfolio',
+				'/terms-of-service',
+				...yourPortfolioProjectIDs.map((id) => `/portfolio/${id}`),
+			],
+		},
 	},
-	extensions: [".svelte", ".svx"],
+	extensions: ['.svelte', '.svx'],
 };
 
 export default config;

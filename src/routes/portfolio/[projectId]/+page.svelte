@@ -1,44 +1,72 @@
 <script>
-    import FeaturedProject from '$lib/components/pages/FeaturedProject.svelte';
-    import ProjectInfo from '$lib/components/pages/ProjectInfo.svelte';
-    export let data;
+	import Header from '$lib/components/layout/Header.svelte';
+	import FeaturedProject from '$lib/components/pages/FeaturedProject.svelte';
+	import ProjectInfo from '$lib/components/pages/ProjectInfo.svelte';
+	export let data;
 
-    $: ({ project, featuredProject, projectId, currentProjectIndex } = data); 
-    
+	$: ({ project, featuredProject, projectId, currentProjectIndex } = data);
 
-    let displayedFeaturedProjects = [];
+	let displayedFeaturedProjects = [];
 
-    $: {
-        if (featuredProject && featuredProject.length > 0 && currentProjectIndex !== -1) {
-            const totalFeatured = featuredProject.length;
-            
-            let startIndex = (currentProjectIndex + 1) % totalFeatured; 
+	$: {
+		if (featuredProject && featuredProject.length > 0 && currentProjectIndex !== -1) {
+			const totalFeatured = featuredProject.length;
 
-            const tempFeatured = [];
-            for (let i = 0; i < 3; i++) {
-                const index = (startIndex + i) % totalFeatured; 
-                tempFeatured.push(featuredProject[index]);
-            }
-            displayedFeaturedProjects = tempFeatured;
-        } else {
-            displayedFeaturedProjects = []; 
-        }
-    }
-	
+			let startIndex = (currentProjectIndex + 1) % totalFeatured;
+
+			const tempFeatured = [];
+			for (let i = 0; i < 3; i++) {
+				const index = (startIndex + i) % totalFeatured;
+				tempFeatured.push(featuredProject[index]);
+			}
+			displayedFeaturedProjects = tempFeatured;
+		} else {
+			displayedFeaturedProjects = [];
+		}
+	}
 </script>
 
 <svelte:head>
-    <title>James Barnes - {project.projectName}</title>
+	<title>James Barnes - {project.projectName}</title>
 </svelte:head>
 
+<Header currentPageTitle={project.projectName} />
+
 <section id="project-item" class="container">
-    <ProjectInfo projectInfo={project} />
-    <div class="featured-projects">
-        <h2>Featured Projects</h2>
-        <div> 
-            {#each displayedFeaturedProjects as fp (fp.id)}
-                <FeaturedProject featuredProject={fp} />
-            {/each}
-        </div>
-    </div>
+	<ProjectInfo projectInfo={project} />
+	<div class="featured-projects">
+		<h2>Featured Projects</h2>
+		<div>
+			{#each displayedFeaturedProjects as fp (fp.id)}
+				<FeaturedProject featuredProject={fp} />
+			{/each}
+		</div>
+	</div>
 </section>
+
+<style lang="scss">
+	/* Project Layout */
+
+	.featured-projects {
+		margin-top: 5rem;
+
+		& > div {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 3rem;
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+		#project-item .project-info {
+			flex-direction: column;
+		}
+		#project-item .project-info img {
+			width: 100%;
+			aspect-ratio: 16/9;
+		}
+		.featured-projects > div {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

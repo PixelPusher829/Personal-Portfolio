@@ -1,10 +1,12 @@
-/* PARTIALS */
-@use "partials" as *;
-/* BASE */
-@use "base";
-/* LAYOUT */
-@use "layout";
-/* COMPONENTS */
-@use "components";
-/* PAGES */
-@use "pages";
+/* RESET */
+@use 'reset';
+/* VARIABLES */
+@use 'variables' as *;
+/* MIXINS */
+@use 'mixins' as *;
+/* UTILITIES */
+@use 'utilities';
+/* TYPOGRAPHY */
+@use 'typography';
+
+@use 'buttons-temp.scss';
