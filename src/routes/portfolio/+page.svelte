@@ -1,5 +1,5 @@
 <script>
-	import PortfolioListing from '$lib/components/pages/PortfolioListing.svelte';
+	import PortfolioListing from '$lib/components/pages/portfolio/PortfolioListing.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
 	let pageTitle = 'Project Archive';
 </script>

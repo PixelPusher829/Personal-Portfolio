@@ -5,7 +5,7 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import ContactCta from '$lib/components/layout/ContactCta.svelte';
 	import { page } from '$app/stores';
-	import HeroBanner from '$lib/components/layout/HeroBanner.svelte';
+	import HeroBanner from '$lib/components/pages/home/HeroBanner.svelte';
 	let { children } = $props();
 	let currentPageTitle = 'Page Title';
 

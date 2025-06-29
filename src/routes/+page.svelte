@@ -1,8 +1,8 @@
 <script>
-	import Skillset from '$lib/components/pages/Skillset.svelte';
-	import ProgressBarAnimation from '$lib/components/utils/ProgressBarAnimation.svelte';
-	import StatsAnimation from '$lib/components/utils/StatsAnimation.svelte';
-	import HeroBanner from '$lib/components/layout/HeroBanner.svelte';
+	import Skillset from '$lib/components/pages/home/Skillset.svelte';
+	import ProgressBarAnimation from '$lib/utils/ProgressBarAnimation.svelte';
+	import StatsAnimation from '$lib/utils/StatsAnimation.svelte';
+	import HeroBanner from '$lib/components/pages/home/HeroBanner.svelte';
 </script>
 
 <svelte:head>
@@ -21,7 +21,7 @@
 			in creating memorable digital experiences that captivate and assist users in planning an
 			unforgettable evening of intrigue.
 		</p>
-		<a href="projects/murder-mystery" class="primary-btn">View Project</a>
+		<a href="portfolio/murder-mystery-guide" class="primary-btn">View Project</a>
 	</div>
 	<img
 		src="./images/projects/featured-images/murder-mystery-guide-featured.jpg"

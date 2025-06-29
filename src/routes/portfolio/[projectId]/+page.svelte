@@ -1,7 +1,7 @@
 <script>
 	import Header from '$lib/components/layout/Header.svelte';
-	import FeaturedProject from '$lib/components/pages/FeaturedProject.svelte';
-	import ProjectInfo from '$lib/components/pages/ProjectInfo.svelte';
+	import FeaturedProject from '$lib/components/pages/portfolio/FeaturedProject.svelte';
+	import ProjectInfo from '$lib/components/pages/portfolio/ProjectInfo.svelte';
 	export let data;
 
 	$: ({ project, featuredProject, projectId, currentProjectIndex } = data);

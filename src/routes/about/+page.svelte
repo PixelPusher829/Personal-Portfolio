@@ -1,5 +1,5 @@
 <script>
-	import ExperienceCard from '$lib/components/pages/ExperienceCard.svelte';
+	import ExperienceCard from '$lib/components/pages/about/ExperienceCard.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
 	let pageTitle = 'About Me';
 
