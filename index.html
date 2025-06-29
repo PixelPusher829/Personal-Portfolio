@@ -14,12 +14,24 @@
 		<!-- prettier-ignore end-->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<base href="/Personal-Portfolio/" />
+		<script>
+			// This script fixes GitHub Pages routing by cleaning hash-based URLs
+			// before SvelteKit's router initializes.
+			const basePath = '/Personal-Portfolio'; // Your repository name
 		
-		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/entry/start.DvmbBh1C.js">
-		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/BDlwiAQu.js">
+			if (window.location.hash && window.location.pathname.startsWith(basePath) && window.location.pathname.endsWith('/index.html')) {
+				// Reconstruct the URL to put the hash content into the path
+				const targetPath = basePath + window.location.hash.substring(1) + window.location.search;
+				window.history.replaceState({}, '', targetPath);
+			}
+		</script>
+
+		
+		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/entry/start.C-4MnPPd.js">
+		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/DwC6PgJw.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/DAd87T0t.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/B7BdJQsr.js">
-		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/entry/app.mopILzSG.js">
+		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/entry/app.BVUBbBLY.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/CWj6FrbW.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/D-lSRwLk.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/DqoM4qbO.js">
@@ -29,7 +41,7 @@
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_uu95x6 = {
+					__sveltekit_2z96im = {
 						base: "/Personal-Portfolio",
 						assets: "/Personal-Portfolio"
 					};
@@ -37,8 +49,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/Personal-Portfolio/_app/immutable/entry/start.DvmbBh1C.js"),
-						import("/Personal-Portfolio/_app/immutable/entry/app.mopILzSG.js")
+						import("/Personal-Portfolio/_app/immutable/entry/start.C-4MnPPd.js"),
+						import("/Personal-Portfolio/_app/immutable/entry/app.BVUBbBLY.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
