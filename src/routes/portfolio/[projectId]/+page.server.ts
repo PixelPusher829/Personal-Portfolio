@@ -17,6 +17,6 @@ export const load = ({ params }) => {
 		project,
 		featuredProject,
 		projectId,
-		currentProjectIndex
+		currentProjectIndex,
 	};
 };

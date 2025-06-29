@@ -1,5 +1,5 @@
 <script>
-	import Skills from '$lib/components/pages/Skills.svelte';
+	import Skillset from '$lib/components/pages/Skillset.svelte';
 	import ProgressBarAnimation from '$lib/components/utils/ProgressBarAnimation.svelte';
 	import StatsAnimation from '$lib/components/utils/StatsAnimation.svelte';
 </script>
@@ -31,16 +31,16 @@
 <section id="my-skillset" class="container">
 	<h2>My Skillset</h2>
 	<div class="skillset-grid">
-		<Skills skillPercent={90} skillName="Wordpress" imgSrc="wordpress.png" />
-		<Skills skillPercent={90} skillName="HTML" imgSrc="html.png" />
-		<Skills skillPercent={80} skillName="Figma" imgSrc="figma.png" />
-		<Skills skillPercent={75} skillName="CSS" imgSrc="css.png" />
-		<Skills skillPercent={90} skillName="Adobe Suite" imgSrc="adobe.png" />
-		<Skills skillPercent={60} skillName="Javascript" imgSrc="javascript.png" />
-		<Skills skillPercent={60} skillName="Webflow" imgSrc="webflow.png" />
-		<Skills skillPercent={75} skillName="Svelte" imgSrc="svelte.png" />
-		<Skills skillPercent={90} skillName="Tailwind" imgSrc="tailwind.png" />
-		<Skills skillPercent={70} skillName="React" imgSrc="react.png" />
+		<Skillset skillPercent={90} skillName="Wordpress" imgSrc="wordpress.png" />
+		<Skillset skillPercent={90} skillName="HTML" imgSrc="html.png" />
+		<Skillset skillPercent={80} skillName="Figma" imgSrc="figma.png" />
+		<Skillset skillPercent={75} skillName="CSS" imgSrc="css.png" />
+		<Skillset skillPercent={90} skillName="Adobe Suite" imgSrc="adobe.png" />
+		<Skillset skillPercent={60} skillName="Javascript" imgSrc="javascript.png" />
+		<Skillset skillPercent={60} skillName="Webflow" imgSrc="webflow.png" />
+		<Skillset skillPercent={75} skillName="Svelte" imgSrc="svelte.png" />
+		<Skillset skillPercent={90} skillName="Tailwind" imgSrc="tailwind.png" />
+		<Skillset skillPercent={70} skillName="React" imgSrc="react.png" />
 	</div>
 </section>
 <ProgressBarAnimation />
@@ -121,4 +121,234 @@
 		</div>
 	</div>
 </section>
-<StatsAnimation /> ```
+<StatsAnimation />
+
+<style lang="scss">
+	@use 'variables' as *;
+
+	/* My Skillset */
+	.skillset-grid {
+		display: grid;
+		gap: 2.5rem 2rem;
+		grid: auto / repeat(2, 1fr);
+		margin-top: 2rem;
+	}
+
+	@media screen and (max-width: 700px) {
+		.skillset-grid {
+			grid: auto / 1fr;
+		}
+	}
+
+	/* Featured Projects */
+	section#featured-work {
+		display: grid;
+		align-items: center;
+		gap: 2.7rem;
+		grid-template: auto / 1fr 1fr;
+	}
+
+	#featured-work {
+		img {
+			object-fit: cover;
+			height: 30rem;
+		}
+		div {
+			margin-right: 8%;
+		}
+		span {
+			font-size: clamp(1.2rem, 1.1rem + 0.5vw, 2rem);
+			font-weight: 500;
+			display: block;
+			margin-bottom: 0.4rem;
+		}
+	}
+
+	@media screen and (max-width: 990px) {
+		section#featured-work {
+			grid-template: auto / 1fr;
+			gap: 2rem;
+		}
+		#featured-work img {
+			grid-row: 1;
+			height: auto;
+			aspect-ratio: 16/9;
+		}
+	}
+
+	/* Features */
+	.features {
+		display: grid;
+		margin: 5rem 0 4rem;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 2rem;
+		row-gap: 4rem;
+		justify-content: space-evenly;
+		transition: all 0s ease;
+		& img {
+			max-height: 7rem;
+		}
+		& span {
+			font-size: 1.2rem;
+			font-weight: 500;
+			color: $heading;
+		}
+	}
+
+	.features > div {
+		gap: 1rem;
+		text-align: center;
+		min-width: fit-content;
+		align-self: start;
+		& img {
+			display: block;
+			margin: auto;
+			margin-bottom: 1rem;
+		}
+	}
+
+	@media screen and (max-width: 1170px) {
+		.features {
+			gap: 1rem;
+			margin: 5rem auto 4rem;
+			& span {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 920px) {
+		.features {
+			grid-template-columns: repeat(6, 1fr);
+			row-gap: 3rem;
+			width: min(650px, 100%);
+			& div {
+				grid-column: span 2;
+				margin-bottom: 1rem;
+			}
+			& div:nth-child(4) {
+				grid-column: 2 / 4;
+			}
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		.features {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 2.5rem;
+			& > div {
+				flex: 1;
+				margin-bottom: 1.5rem;
+				max-width: 10rem;
+			}
+			& img {
+				max-height: 7rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 555px) {
+		.features {
+			flex-direction: column;
+			& > div {
+				align-self: center;
+			}
+
+			& span {
+				font-size: 1.1rem;
+			}
+		}
+	}
+
+	/* Testimonials */
+	#testimonials {
+		display: grid;
+		grid: auto / 2fr 1fr;
+		align-items: center;
+		margin: 6rem auto;
+	}
+
+	#testimonials img {
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		object-position: 50% 10%;
+		border-radius: 50%;
+	}
+
+	#testimonials > div {
+		margin-right: 12%;
+	}
+
+	.client-name {
+		font-weight: 500;
+		font-size: 2.25rem;
+		display: block;
+		color: $heading;
+		margin-bottom: 0.7rem;
+	}
+
+	.client-company {
+		display: block;
+		font-weight: 500;
+		font-size: 1.1rem;
+		color: hsl(0, 0%, 65%);
+		letter-spacing: 0.3rem;
+		text-transform: uppercase;
+		margin-bottom: 1.5rem;
+	}
+
+	@media screen and (max-width: 1100px) {
+		#testimonials {
+			grid-template: auto / 1fr;
+			text-align: center;
+			align-items: center;
+			justify-items: center;
+			margin: 6rem auto;
+			& > div {
+				margin-right: 0;
+			}
+		}
+
+		#testimonials img {
+			grid-row: 1;
+			max-width: 15rem;
+			margin-bottom: 2rem;
+		}
+		#testimonials .body-large {
+			font-size: 1.2rem;
+		}
+	}
+	/* Statistics */
+	#stats > div {
+		margin-top: 2.2rem;
+		display: grid;
+		grid: auto / repeat(3, 1fr);
+		gap: 4rem;
+	}
+
+	#stats span {
+		display: block;
+	}
+
+	.stat-number {
+		font-size: 4rem;
+		color: $secondary;
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-title {
+		color: $dark-txt;
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin-bottom: 0.6rem;
+	}
+
+	@media screen and (max-width: 700px) {
+		#stats > div {
+			grid-template: auto / 1fr;
+		}
+	}
+</style>

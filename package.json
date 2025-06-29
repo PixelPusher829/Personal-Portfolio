@@ -13,7 +13,8 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run"
+		"test": "npm run test:unit -- --run",
+		"deploy": "npm run build && gh-pages -d build"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -27,6 +28,7 @@
 		"@vitest/browser": "^3.2.3",
 		"eslint": "^9.18.0",
 		"eslint-plugin-svelte": "^3.0.0",
+		"gh-pages": "^6.3.0",
 		"globals": "^16.0.0",
 		"mdsvex": "^0.12.3",
 		"playwright": "^1.53.0",

@@ -1,5 +1,7 @@
 <script>
 	import ExperienceCard from '$lib/components/pages/ExperienceCard.svelte';
+	import Header from '$lib/components/layout/Header.svelte';
+	let pageTitle = 'About Me';
 
 	const job = [
 		{
@@ -46,8 +48,10 @@
 </script>
 
 <svelte:head>
-	<title>James Barnes - About Me</title>
+	<title>James Barnes - {pageTitle}</title>
 </svelte:head>
+
+<Header currentPageTitle={pageTitle} />
 
 <section id="about-intro" class="container">
 	<div>
@@ -155,3 +159,159 @@
 		<img src="/images/about/client-logos/Black_Opal_Logo-1.webp" alt="Black Opal Logo" />
 	</div>
 </section>
+
+<style lang="scss">
+	@use 'variables' as *;
+
+	#about-intro {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 3rem;
+		& img {
+			height: 100%;
+			object-fit: cover;
+			object-position: 10% 50%;
+		}
+	}
+
+	.about-quote {
+		font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
+		color: $dark-txt;
+		margin-bottom: 2.5rem;
+	}
+
+	@media screen and (max-width: 1100px) {
+		#about-intro {
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		#about-intro {
+			grid-template-columns: 1fr;
+			img {
+				object-fit: cover;
+				grid-row: 1;
+				aspect-ratio: 1/1;
+				object-position: 50% 40%;
+			}
+		}
+	}
+
+	/* Expertise */
+	#my-experience {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.8rem;
+		margin: 6rem auto;
+	}
+
+	#my-experience .exp-column {
+		display: grid;
+		grid-template-rows: repeat(3, 16.6rem);
+		gap: 1.8rem;
+	}
+
+	@media screen and (max-width: 800px) {
+		#my-experience {
+			grid-template-columns: 1fr;
+			& .exp-column {
+				grid-template-rows: repeat(3, minmax(16.6rem, auto));
+			}
+		}
+	}
+
+	#my-experience h3 > i {
+		font-size: 2.4rem;
+		color: $heading;
+		text-align: end;
+		margin-right: 1rem;
+		position: relative;
+		top: 0.3rem;
+	}
+
+	/* Why choose my services? */
+	#why-my-services {
+		text-align: center;
+	}
+
+	#why-my-services .services-grid {
+		display: grid;
+		grid: auto / repeat(3, 1fr);
+		gap: 3rem;
+		margin-top: 3rem;
+		justify-items: center;
+	}
+
+	#why-my-services .service-title {
+		font-size: 1.2rem;
+		color: $heading;
+		font-weight: 500;
+	}
+
+	.services-grid > div {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: center;
+		max-width: 19rem;
+	}
+
+	.services-grid img {
+		width: 8rem;
+		margin-bottom: 1rem;
+	}
+
+	@media screen and (max-width: 900px) {
+		#why-my-services .services-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	/* My Clients */
+	#my-clients {
+		text-align: center;
+		margin-bottom: 10rem;
+	}
+
+	#my-clients .clients-grid {
+		display: grid;
+		grid: auto/repeat(3, 1fr);
+		align-items: center;
+		justify-items: center;
+		row-gap: 3rem;
+		margin-top: 3rem;
+	}
+
+	#my-clients img {
+		width: auto;
+	}
+
+	.clients-grid :nth-child(2) {
+		height: 6rem;
+	}
+
+	.clients-grid :nth-child(3) {
+		height: 5rem;
+	}
+
+	.clients-grid :nth-child(4) {
+		height: 4rem;
+	}
+
+	.clients-grid :nth-child(5) {
+		height: 6rem;
+	}
+
+	.clients-grid :nth-child(6) {
+		height: 3rem;
+	}
+
+	@media screen and (max-width: 900px) {
+		#my-clients .clients-grid {
+			grid-template-columns: 1fr;
+			gap: rem;
+		}
+	}
+</style>
