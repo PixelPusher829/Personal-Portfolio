@@ -1,4 +1,4 @@
-import"../chunks/CWj6FrbW.js";import"../chunks/DXgeBYG3.js";import{x as o,aj as a,ak as n,z as r,al as l,am as c}from"../chunks/B7BdJQsr.js";import{H as d}from"../chunks/D4MJ_SSd.js";var h=o(`<!> <section class="container terms svelte-x6symd"><p><strong>Effective Date:</strong> April 12, 2025</p> <p>Welcome to the official website of James Barnes ("Website"). These Terms and Conditions
+import"../chunks/CWj6FrbW.js";import"../chunks/CAz-u_ui.js";import{k as o,U as a,V as n,l as r,$ as l,W as c}from"../chunks/DpWnTHyO.js";import{H as d}from"../chunks/z9O75tIf.js";var h=o(`<!> <section class="container terms svelte-x6symd"><p><strong>Effective Date:</strong> April 12, 2025</p> <p>Welcome to the official website of James Barnes ("Website"). These Terms and Conditions
 		("Terms") govern your access to and use of the Website and all associated content, features,
 		and services. By accessing or using this Website, you acknowledge and agree that you have
 		read, understood, and accepted these Terms in their entirety. If you do not agree to all of
