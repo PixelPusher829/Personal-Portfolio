@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        var path = window.location.pathname;
+        var query = window.location.search;
+        var hash = window.location.hash;
+
+        var basePath = '/Personal-Portfolio'; 
+
+        window.location.replace(basePath + '/index.html#' + path.substring(basePath.length) + query + hash);
+    </script>
+</head>
+<body>
+    If you are not redirected automatically, follow this <a href="/">link</a>.
+</body>
+</html>

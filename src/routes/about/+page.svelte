@@ -90,7 +90,7 @@
 			</a>
 		</div>
 	</div>
-	<img src="/images/about/about_intro.jpg" alt="James coding on a laptop" class="curved" />
+	<img src="./images/about/about_intro.jpg" alt="James coding on a laptop" class="curved" />
 </section>
 <section id="my-experience" class="container">
 	<div>
@@ -121,7 +121,7 @@
 	<div class="services-grid">
 		<div>
 			<img
-				src="/images/about/service-logos/user-centric.png"
+				src="./images/about/service-logos/user-centric.png"
 				alt="User centric Approach icon"
 			/>
 			<span class="service-title">User-Centric Approach</span>
@@ -129,7 +129,7 @@
 		</div>
 		<div>
 			<img
-				src="/images/about/service-logos/precision-design.png"
+				src="./images/about/service-logos/precision-design.png"
 				alt="Precision Design icon"
 			/>
 			<span class="service-title">Precision Design</span>
@@ -137,7 +137,7 @@
 		</div>
 		<div>
 			<img
-				src="/images/about/service-logos/problem-solving.png"
+				src="./images/about/service-logos/problem-solving.png"
 				alt="Creative Problem Solving icon"
 			/>
 			<span class="service-title">Creative Problem Solving</span>
@@ -148,15 +148,15 @@
 <section id="my-clients" class="container">
 	<h2>My Clients</h2>
 	<div class="clients-grid">
-		<img src="/images/about/client-logos/Elixir-Projects-Logo.webp" alt="Exlixir Logo" />
-		<img src="/images/about/client-logos/Jaltech-Logo.webp" alt="Jaltech Logo" />
+		<img src="./images/about/client-logos/Elixir-Projects-Logo.webp" alt="Exlixir Logo" />
+		<img src="./images/about/client-logos/Jaltech-Logo.webp" alt="Jaltech Logo" />
 		<img
-			src="/images/about/client-logos/Lillian-Gray-Art-School-Logo-1-1.webp"
+			src="./images/about/client-logos/Lillian-Gray-Art-School-Logo-1-1.webp"
 			alt="Lillian Gray Logo"
 		/>
-		<img src="/images/about/client-logos/SAASIE-logo.webp" alt="SAASIE Logo" />
-		<img src="/images/about/client-logos/static1.squarespace-1.webp" alt="Living Room Logo" />
-		<img src="/images/about/client-logos/Black_Opal_Logo-1.webp" alt="Black Opal Logo" />
+		<img src="./images/about/client-logos/SAASIE-logo.webp" alt="SAASIE Logo" />
+		<img src="./images/about/client-logos/static1.squarespace-1.webp" alt="Living Room Logo" />
+		<img src="./images/about/client-logos/Black_Opal_Logo-1.webp" alt="Black Opal Logo" />
 	</div>
 </section>
 

@@ -27,7 +27,7 @@
 			<div>
 				<input type="checkbox" name="terms" id="terms" />
 				<label for="terms">
-					<a href="/terms-of-service">I agree to the terms and conditions</a>
+					<a href="./terms-of-service">I agree to the terms and conditions</a>
 				</label>
 			</div>
 			<button type="submit" class="primary-btn">Submit</button>

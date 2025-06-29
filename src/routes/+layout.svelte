@@ -14,9 +14,6 @@
 
 <div>
 	<GlobalNav />
-	{#if $page.url.pathname == '/'}
-		<HeroBanner />
-	{/if}
 	<div>
 		{@render children()}
 	</div>

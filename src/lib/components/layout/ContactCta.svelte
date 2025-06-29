@@ -6,7 +6,7 @@
 				Ready to elevate your project? Drop me a message below and let's collaborate to make
 				your vision a reality.
 			</span>
-			<a href="/contact" class="primary-btn">Contact Me</a>
+			<a href="./contact" class="primary-btn">Contact Me</a>
 		</div>
 	</div>
 </div>
@@ -17,7 +17,7 @@
 	.contact-cta {
 		color: white;
 		text-align: center;
-		background: url(../images/global/contact_cta.jpg) center;
+		background: url('/images/global/contact_cta.jpg') center;
 		background-size: cover;
 	}
 
@@ -50,27 +50,5 @@
 		.contact-cta .body-large {
 			font-size: 1.2rem;
 		}
-	}
-
-	/* My Work CTA */
-	#my-work-cta {
-		text-align: center;
-		background: url(../images/home/my_work_cta.jpg) center;
-		background-size: cover;
-	}
-
-	#my-work-cta > div {
-		padding: 4rem;
-		background-color: hsla(0, 0%, 100%, 0.95);
-	}
-
-	@media screen and (max-width: 700px) {
-		#my-work-cta > div {
-			padding: 3rem 2rem;
-		}
-	}
-
-	#my-work-cta .primary-btn {
-		margin-top: 2rem;
 	}
 </style>

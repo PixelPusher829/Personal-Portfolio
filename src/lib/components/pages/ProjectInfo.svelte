@@ -12,7 +12,7 @@
 </script>
 
 <div class="project-info">
-	<img src="/images/projects/featured-images/{id}-featured.jpg" alt="" />
+	<img src="./images/projects/featured-images/{id}-featured.jpg" alt="" />
 	<div>
 		<h2>{leadText}</h2>
 		<p>{description}</p>

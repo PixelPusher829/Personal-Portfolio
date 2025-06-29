@@ -5,7 +5,7 @@
 
 <div>
 	<a href="portfolio/{id}">
-		<img src="/images/projects/thumbnails/{id}.jpg" alt={title} />
+		<img src="./images/projects/thumbnails/{id}.jpg" alt={title} />
 		<span>{title}</span>
 	</a>
 </div>

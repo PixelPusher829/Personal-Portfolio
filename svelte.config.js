@@ -1,4 +1,3 @@
-// svelte.config.js
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
@@ -8,7 +7,6 @@ import fs from 'fs';
 
 function getPortfolioProjectIDsFromJSON() {
 	const jsonFilePath = path.resolve(process.cwd(), 'src', 'lib', 'data', 'project-database.json');
-
 	try {
 		const fileContent = fs.readFileSync(jsonFilePath, 'utf-8');
 		const projects = JSON.parse(fileContent);
@@ -34,6 +32,9 @@ const config = {
 	],
 
 	kit: {
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/Personal-Portfolio' : '',
+		},
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
@@ -41,7 +42,6 @@ const config = {
 			precompress: false,
 			strict: true,
 		}),
-
 		prerender: {
 			entries: [
 				'/',

@@ -5,7 +5,7 @@
 </script>
 
 <div class="skill-item">
-	<img src="/images/home/skillset-logos/{imgSrc}" alt="Adobe Logo" />
+	<img src="./images/home/skillset-logos/{imgSrc}" alt="Adobe Logo" />
 	<div>
 		<div class="skill-data">
 			{skillName}

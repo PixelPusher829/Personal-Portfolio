@@ -2,12 +2,14 @@
 	import Skillset from '$lib/components/pages/Skillset.svelte';
 	import ProgressBarAnimation from '$lib/components/utils/ProgressBarAnimation.svelte';
 	import StatsAnimation from '$lib/components/utils/StatsAnimation.svelte';
+	import HeroBanner from '$lib/components/layout/HeroBanner.svelte';
 </script>
 
 <svelte:head>
 	<title>James Barnes - Web Developer</title>
 </svelte:head>
 
+<HeroBanner />
 <section id="featured-work" class="container">
 	<div>
 		<h2>Featured Project</h2>
@@ -22,7 +24,7 @@
 		<a href="projects/murder-mystery" class="primary-btn">View Project</a>
 	</div>
 	<img
-		src="/images/projects/featured-images/murder-mystery-guide-featured.jpg"
+		src="./images/projects/featured-images/murder-mystery-guide-featured.jpg"
 		alt="featured project image"
 		class="curved"
 	/>
@@ -47,23 +49,23 @@
 <section id="features" class="container">
 	<div class="features">
 		<div>
-			<img src="/images/home/icons/web_development.png" alt="Web Development Icon" />
+			<img src="./images/home/icons/web_development.png" alt="Web Development Icon" />
 			<span>Web Development</span>
 		</div>
 		<div>
-			<img src="/images/home/icons/ui_design.png" alt="UI Design Icon" />
+			<img src="./images/home/icons/ui_design.png" alt="UI Design Icon" />
 			<span>UI Design</span>
 		</div>
 		<div>
-			<img src="/images/home/icons/online_marketing.png" alt="Online Marketing Icon" />
+			<img src="./images/home/icons/online_marketing.png" alt="Online Marketing Icon" />
 			<span>Online Marketing</span>
 		</div>
 		<div>
-			<img src="/images/home/icons/graphic_design.png" alt="Graphic Design Icon" />
+			<img src="./images/home/icons/graphic_design.png" alt="Graphic Design Icon" />
 			<span>Graphic Design</span>
 		</div>
 		<div>
-			<img src="/images/home/icons/seo.png" alt="Web Visibility Icon" />
+			<img src="./images/home/icons/seo.png" alt="Web Visibility Icon" />
 			<span>Web Visibility</span>
 		</div>
 	</div>
@@ -89,7 +91,7 @@
 			an incredibly valuable asset to any business."
 		</p>
 	</div>
-	<img src="/images/home/client.jpg" alt="Sarah Johnson profile" />
+	<img src="./images/home/client.jpg" alt="Sarah Johnson profile" />
 </div>
 
 <section id="stats" class="container">
@@ -350,5 +352,27 @@
 		#stats > div {
 			grid-template: auto / 1fr;
 		}
+	}
+
+	/* My Work CTA */
+	#my-work-cta {
+		text-align: center;
+		background: url('/images/home/my_work_cta.jpg') center;
+		background-size: cover;
+	}
+
+	#my-work-cta > div {
+		padding: 4rem;
+		background-color: hsla(0, 0%, 100%, 0.95);
+	}
+
+	@media screen and (max-width: 700px) {
+		#my-work-cta > div {
+			padding: 3rem 2rem;
+		}
+	}
+
+	#my-work-cta .primary-btn {
+		margin-top: 2rem;
 	}
 </style>
