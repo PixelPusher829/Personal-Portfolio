@@ -1,3 +1,7 @@
+<script>
+import { base } from '$app/paths';
+</script>
+
 <div class="contact-cta">
 	<div class="gray-filter">
 		<div class="container">
@@ -6,7 +10,7 @@
 				Ready to elevate your project? Drop me a message below and let's collaborate to make
 				your vision a reality.
 			</span>
-			<a href="./contact" class="primary-btn">Contact Me</a>
+			<a href="{base}/contact" class="primary-btn">Contact Me</a>
 		</div>
 	</div>
 </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import {base} from '$app/paths';
 	let currentYear: number; // Declare this as a Svelte reactive variable
 
 	onMount(() => {
@@ -11,13 +12,13 @@
 
 <footer>
 	<div>
-		<a href="./" title="Homepage"><img src="./images/global/jb_logo_light.png" alt="" /></a>
+		<a href="./" title="Homepage"><img src="{base}/images/global/jb_logo_light.png" alt="" /></a>
 		<div>
 			<ul class="footer-nav">
-				<li><a href="./">Home</a></li>
-				<li><a href="./about">About</a></li>
-				<li><a href="./portfolio">Portfolio</a></li>
-				<li><a href="./contact">Contact</a></li>
+				<li><a href="{base}/">Home</a></li>
+				<li><a href="{base}/about">About</a></li>
+				<li><a href="{base}/portfolio">Portfolio</a></li>
+				<li><a href="{base}/contact">Contact</a></li>
 			</ul>
 		</div>
 		<div class="socials">

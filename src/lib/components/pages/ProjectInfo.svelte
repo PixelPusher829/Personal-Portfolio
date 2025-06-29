@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	export let projectInfo = {
 		projectName: 'Project Name',
 		leadText: 'Project Title',
@@ -12,7 +13,7 @@
 </script>
 
 <div class="project-info">
-	<img src="./images/projects/featured-images/{id}-featured.jpg" alt="" />
+	<img src="{base}/images/projects/featured-images/{id}-featured.jpg" alt="" />
 	<div>
 		<h2>{leadText}</h2>
 		<p>{description}</p>

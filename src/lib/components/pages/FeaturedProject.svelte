@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	export let featuredProject = {
 		title: 'Project Name',
 		description:
@@ -10,12 +11,12 @@
 </script>
 
 <div>
-	<a href="./portfolio/{id}" title="View {title} Project" data-sveltekit-noscroll>
-		<img src="./images/projects/thumbnails/{id}.jpg" alt="{title} thumbnail" />
+	<a href="{base}/portfolio/{id}" title="View {title} Project" data-sveltekit-noscroll>
+		<img src="{base}/images/projects/thumbnails/{id}.jpg" alt="{title} thumbnail" />
 	</a>
 	<span>{title}</span>
 	<p>{description}</p>
-	<a href="./portfolio/{id}" class="secondary-button" data-sveltekit-noscroll>
+	<a href="{base}/portfolio/{id}" class="secondary-button" data-sveltekit-noscroll>
 		View Project
 		<i class="fi fi-bs-angle-right"></i>
 	</a>

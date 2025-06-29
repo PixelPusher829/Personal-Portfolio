@@ -1,17 +1,19 @@
-// src/routes/portfolio/[projectId]/+page.server.js
-
+import { error } from '@sveltejs/kit';
 import projectData from '$lib/data/project-database.json';
 import featuredProjectData from '$lib/data/featured-projects.json';
+
+export const prerender = true;
 
 export const load = ({ params }) => {
 	const projectId = params.projectId;
 
-	const projectFound = projectData.find((p) => p.id === params.projectId);
-	const project = projectFound ? JSON.parse(JSON.stringify(projectFound)) : null;
+	const project = projectData.find((p) => p.id === projectId);
+	if (!project) {
+		throw error(404, `Project not found: ${projectId}`);
+	}
 
-	const featuredProject = JSON.parse(JSON.stringify(featuredProjectData));
-
-	const currentProjectIndex = projectData.findIndex((p) => p.id === params.projectId);
+	const featuredProject = structuredClone(featuredProjectData);
+	const currentProjectIndex = projectData.findIndex((p) => p.id === projectId);
 
 	return {
 		project,
