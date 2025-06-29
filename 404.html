@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+        (function(){
+            var path = window.location.pathname;
+            var query = window.location.search;
+            var hash = window.location.hash;
+
+            // IMPORTANT: This MUST match your repository name on GitHub
+            var base = '/Personal-Portfolio'; 
+
+            // If the current path doesn't start with the base, redirect to base's index.html
+            if (!path.startsWith(base)) {
+                window.location.replace(base + '/index.html' + query + hash);
+                return;
+            }
+
+            // If the current path is not index.html *within* the base, redirect to index.html
+            if (window.location.pathname !== base + '/index.html') {
+                window.location.replace(base + '/index.html' + window.location.pathname.substring(base.length) + query + hash);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
