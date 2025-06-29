@@ -4,19 +4,13 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-        var base = '/Personal-Portfolio'; 
         var path = window.location.pathname;
         var query = window.location.search;
         var hash = window.location.hash;
 
-        if (!path.startsWith(base)) {
-            const fullPath = base + path + query + hash;
-            window.location.replace(fullPath);
-        } else if (path === base || path === base + '/') {
-            window.location.replace(base + '/index.html' + query + hash);
-        } else {
-            window.location.replace(base + '/index.html#' + path.substring(base.length) + query + hash);
-        }
+        var basePath = '/Personal-Portfolio';
+
+        window.location.replace(basePath + '/index.html#' + path.substring(basePath.length) + query + hash);
     </script>
 </head>
 <body>

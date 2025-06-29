@@ -13,25 +13,14 @@
 		<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css" />
 		<!-- prettier-ignore end-->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<base href="/Personal-Portfolio/" />
-		<script>
-			// This script fixes GitHub Pages routing by cleaning hash-based URLs
-			// before SvelteKit's router initializes.
-			const basePath = '/Personal-Portfolio'; // Your repository name
-		
-			if (window.location.hash && window.location.pathname.startsWith(basePath) && window.location.pathname.endsWith('/index.html')) {
-				// Reconstruct the URL to put the hash content into the path
-				const targetPath = basePath + window.location.hash.substring(1) + window.location.search;
-				window.history.replaceState({}, '', targetPath);
-			}
-		</script>
+		<base href="%sveltekit.base%" />
 
 		
-		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/entry/start.C-4MnPPd.js">
-		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/DwC6PgJw.js">
+		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/entry/start.DclmMghY.js">
+		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/NYXy5hs5.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/DAd87T0t.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/B7BdJQsr.js">
-		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/entry/app.BVUBbBLY.js">
+		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/entry/app.CThCOi-M.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/CWj6FrbW.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/D-lSRwLk.js">
 		<link rel="modulepreload" href="/Personal-Portfolio/_app/immutable/chunks/DqoM4qbO.js">
@@ -41,7 +30,7 @@
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_2z96im = {
+					__sveltekit_1bbliuz = {
 						base: "/Personal-Portfolio",
 						assets: "/Personal-Portfolio"
 					};
@@ -49,8 +38,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/Personal-Portfolio/_app/immutable/entry/start.C-4MnPPd.js"),
-						import("/Personal-Portfolio/_app/immutable/entry/app.BVUBbBLY.js")
+						import("/Personal-Portfolio/_app/immutable/entry/start.DclmMghY.js"),
+						import("/Personal-Portfolio/_app/immutable/entry/app.CThCOi-M.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
