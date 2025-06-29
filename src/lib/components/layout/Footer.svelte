@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import {base} from '$app/paths';
+	import { base } from '$app/paths';
 	let currentYear: number; // Declare this as a Svelte reactive variable
 
 	onMount(() => {
@@ -12,7 +12,9 @@
 
 <footer>
 	<div>
-		<a href="./" title="Homepage"><img src="{base}/images/global/jb_logo_light.png" alt="" /></a>
+		<a href="./" title="Homepage">
+			<img src="{base}/images/global/jb_logo_light.png" alt="" />
+		</a>
 		<div>
 			<ul class="footer-nav">
 				<li><a href="{base}/">Home</a></li>
@@ -41,7 +43,7 @@
 	</div>
 	<span class="copywrite">
 		<span class="date">{currentYear}</span>
-		James Barnes. All right reserved.
+		James Barnes. All rights reserved.
 	</span>
 </footer>
 
@@ -78,29 +80,7 @@
 		}
 	}
 
-	@media screen and (max-width: 1045px) {
-		footer > div {
-			grid-template: auto / 1fr;
-			justify-items: center;
-			gap: 1rem;
-			& > * {
-				align-content: center;
-			}
-		}
 
-		footer > div > a img {
-			margin-bottom: 0.5rem;
-		}
-
-		footer > div > a {
-			min-width: auto;
-		}
-
-		footer {
-			background-color: hsl(221, 52%, 13%);
-			padding: 2rem;
-		}
-	}
 
 	ul.footer-nav {
 		display: flex;
@@ -137,4 +117,40 @@
 		display: block;
 		margin-top: 1.5rem;
 	}
+
+	@media screen and (max-width: 1045px) {
+		footer > div {
+			grid-template: auto / 1fr;
+			justify-items: center;
+			gap: 1rem;
+			& > * {
+				align-content: center;
+			}
+		}
+
+		footer > div > a img {
+			margin-bottom: 0.5rem;
+		}
+
+		footer > div > a {
+			min-width: auto;
+		}
+
+		footer {
+			background-color: hsl(221, 52%, 13%);
+			padding: 2rem;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.footer-nav a{
+			font-size: 1rem;
+		}
+
+		footer img {
+			max-width: 15rem;
+		}
+
+	}
+
 </style>

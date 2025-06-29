@@ -165,6 +165,9 @@
 		.close-menu.active {
 			display: block;
 		}
+		nav img {
+			max-width: 15rem;
+		}
 	}
 
 	@media screen and (min-width: 801px) {

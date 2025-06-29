@@ -1,15 +1,15 @@
 <script>
 	import { base } from '$app/paths';
-	export let projectInfo = {
-		projectName: 'Project Name',
-		leadText: 'Project Title',
-		id: 'project-image',
-		url: 'https://example.com/',
-		description:
-			'This is a placeholder description for the project. It outlines the key features and offerings in a concise and informative manner, ensuring that potential clients understand the value and scope of the work.',
-	};
+	let {
+		projectName = 'Project Name',
+		leadText = 'Project Title',
+		id = 'project-image',
+		url = 'https://example.com/',
+		description =
+			'This is a placeholder description for the project. It outlines the key features and offerings in a concise and informative manner, ensuring that potential clients understand the value and scope of the work.'
+	} = $props() ;
 
-	$: ({ leadText, id, url, description } = projectInfo);
+
 </script>
 
 <div class="project-info">
@@ -33,5 +33,15 @@
 		border-radius: 0.8rem;
 		aspect-ratio: 1/1;
 		width: 50%;
+	}
+
+	@media screen and (max-width: 900px) {
+		.project-info {
+			flex-direction: column;
+		}
+		.project-info img {
+			width: 100%;
+			aspect-ratio: 16/9;
+		}
 	}
 </style>

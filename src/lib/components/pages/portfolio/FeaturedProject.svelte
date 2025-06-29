@@ -1,20 +1,20 @@
 <script>
 	import { base } from '$app/paths';
 	export let featuredProject = {
-		title: 'Project Name',
-		description:
-			'An innovative project that combines cutting-edge technology with user-friendly design to create a seamless and engaging experience.',
+		projectName: 'Project Name',
 		id: 'project-id',
+		description:
+			'An innovative project that combines cutting-edge technology with user-friendly design to create a seamless and engaging experience.'
 	};
 
-	$: ({ title, description, id } = featuredProject);
+	$: ({ projectName, description, id } = featuredProject);
 </script>
 
 <div>
-	<a href="{base}/portfolio/{id}" title="View {title} Project" data-sveltekit-noscroll>
-		<img src="{base}/images/projects/thumbnails/{id}.jpg" alt="{title} thumbnail" />
+	<a href="{base}/portfolio/{id}" title="View {projectName} Project" data-sveltekit-noscroll>
+		<img src="{base}/images/projects/thumbnails/{id}.jpg" alt="{projectName} thumbnail" />
 	</a>
-	<span>{title}</span>
+	<span>{projectName}</span>
 	<p>{description}</p>
 	<a href="{base}/portfolio/{id}" class="secondary-button" data-sveltekit-noscroll>
 		View Project

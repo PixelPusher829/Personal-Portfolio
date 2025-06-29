@@ -3,21 +3,21 @@
 	import FeaturedProject from '$lib/components/pages/portfolio/FeaturedProject.svelte';
 	import ProjectInfo from '$lib/components/pages/portfolio/ProjectInfo.svelte';
 	export let data;
-
-	$: ({ project, featuredProject, projectId, currentProjectIndex } = data);
+	
+	$: ({ project, projectData, currentProjectIndex } = data);
 
 	let displayedFeaturedProjects = [];
 
 	$: {
-		if (featuredProject && featuredProject.length > 0 && currentProjectIndex !== -1) {
-			const totalFeatured = featuredProject.length;
+		if (projectData && projectData.length > 0 && currentProjectIndex !== -1) {
+			const totalFeatured = projectData.length;
 
 			let startIndex = (currentProjectIndex + 1) % totalFeatured;
 
 			const tempFeatured = [];
 			for (let i = 0; i < 3; i++) {
 				const index = (startIndex + i) % totalFeatured;
-				tempFeatured.push(featuredProject[index]);
+				tempFeatured.push(projectData[index]);
 			}
 			displayedFeaturedProjects = tempFeatured;
 		} else {
@@ -33,7 +33,7 @@
 <Header currentPageTitle={project.projectName} />
 
 <section id="project-item" class="container">
-	<ProjectInfo projectInfo={project} />
+	<ProjectInfo {...project} />
 	<div class="featured-projects">
 		<h2>Featured Projects</h2>
 		<div>
@@ -58,13 +58,7 @@
 	}
 
 	@media screen and (max-width: 900px) {
-		#project-item .project-info {
-			flex-direction: column;
-		}
-		#project-item .project-info img {
-			width: 100%;
-			aspect-ratio: 16/9;
-		}
+
 		.featured-projects > div {
 			grid-template-columns: 1fr;
 		}
