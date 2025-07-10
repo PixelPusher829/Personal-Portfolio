@@ -1,5 +1,12 @@
 [
 	{
+		"projectName": "Jammming",
+		"leadText": "Your Spotify Playlists, Simplified",
+		"id": "jammming",
+		"url": "https://jammming-virid.vercel.app/",
+		"description": "This web application empowers Spotify users to effortlessly create and manage their music. Search a vast library, craft personalized playlists, and save them directly to your account. Its smart update feature ensures your existing Spotify playlists are refined, not duplicated, providing a seamless and organized music curation experience. Built using React, and the Spotify API, this project showcases my proficiency in building dynamic and interactive web applications."
+	},
+	{
 		"projectName": "FlexFit",
 		"leadText": "Get Fit, Stay Motivated",
 		"id": "flexfit",
@@ -8,7 +15,7 @@
 	},
 	{
 		"projectName": "FlowerCafe",
-		"leadText": "A fusion of floristry and cafe culture",
+		"leadText": "A Fusion of Floristry and Cafe Culture",
 		"id": "flowercafe",
 		"url": "https://flowercafe.co.za/",
 		"description": "Welcome to Flowercafe, a delightful blend of floral artistry and cozy cafe ambiance. Explore our WordPress store for exquisite floral arrangements, perfect for any occasion. Stay informed with our blog, featuring the latest cafe updates and delectable recipes. Enjoy a seamless experience with our user-friendly booking system for reservations. Whether you're seeking a unique gift or a tranquil escape, Flowercafe offers the ideal setting to unwind and indulge."
