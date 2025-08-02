@@ -1,5 +1,4 @@
 node_modules
-_working-files
 
 # Output
 .output
@@ -8,7 +7,6 @@ _working-files
 .wrangler
 /.svelte-kit
 /build
-
 
 # OS
 .DS_Store
@@ -19,7 +17,6 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
-
 
 # Vite
 vite.config.js.timestamp-*
