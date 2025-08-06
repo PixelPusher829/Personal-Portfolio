@@ -24,20 +24,14 @@
 			</ul>
 		</div>
 		<div class="socials">
-			<a href="https://www.facebook.com/jamesbarnes1990" title="Facebook">
-				<i class="fi fi-brands-facebook"></i>
+			<a href="https://github.com/PixelPusher829" title="Github">
+				<i class="fi fi-brands-github"></i>
 			</a>
 			<a href="https://www.instagram.com/zollblade/" title="Instagram">
 				<i class="fi fi-brands-instagram"></i>
 			</a>
-			<a href="https://twitter.com/jbarnes829" title="Twitter">
-				<i class="fi fi-brands-twitter-alt"></i>
-			</a>
 			<a href="https://www.linkedin.com/in/jbarnes0829/" title="LinkedIn">
 				<i class="fi fi-brands-linkedin"></i>
-			</a>
-			<a href="https://github.com/PixelPusher829" title="Github">
-				<i class="fi fi-brands-github"></i>
 			</a>
 		</div>
 	</div>
@@ -97,19 +91,21 @@
 		min-width: 17rem;
 	}
 
-	footer a,
-	.socials * {
-		font-size: 1.2rem;
+	footer a{
 		text-decoration: none;
+		font-size: 1.2rem;
 	}
 
 	.socials {
 		display: flex;
-		gap: 0.5rem;
+		& i{
+			font-size: 1.5rem;
+		}
 	}
 
 	footer .socials {
 		justify-content: right;
+		gap: 1rem;
 	}
 
 	span.copywrite {
